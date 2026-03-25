@@ -44,7 +44,6 @@ UNNEST(hits) hits,
 UNNEST(hits.product) product
 where product.productRevenue is not NULL
 group by time_type, time, source
-
 order by revenue desc;
 
 
@@ -233,7 +232,7 @@ with week_revenue as(
   order by Week
 )
 
--- caculate cumulative revenue
+-- calculate cumulative revenue
 select *
   , sum(weekly_revenue) over(order by Week) cumulative_revenue
 from week_revenue 
