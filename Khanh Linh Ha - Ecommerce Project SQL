@@ -7,7 +7,7 @@ FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*`
 where _table_suffix between '0101' and '0331'
 group by month
 order by month;
-https://github.com/klinhha/Ecommerce/blob/main/Query%202.png
+
 
 -- Query 02: Bounce rate per traffic source in July 2017
 SELECT trafficSource.source source
