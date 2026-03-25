@@ -44,7 +44,6 @@ UNNEST(hits) hits,
 UNNEST(hits.product) product
 where product.productRevenue is not NULL
 group by time_type, time, source
-
 order by revenue desc;
 
 
