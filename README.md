@@ -20,7 +20,7 @@
 
 ## V. Key Analyses & Resultsyses & Results
 ### 1. Calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
-```
+``` sql
 SELECT format_date('%Y%m', parse_date('%Y%m%d', date)) month
   , sum(totals.visits) visits
   , sum(totals.pageviews) pageviews
@@ -34,7 +34,7 @@ order by month;
 <img width="636" height="107" alt="Image" src="https://github.com/user-attachments/assets/fd068a9a-e940-4a96-9edb-e79d8ab86bd5" />
 
 ### 2. Bounce Rate by Traffic Source
-```
+``` sql
 SELECT trafficSource.source source
   , sum(totals.visits) total_visits
   , sum(totals.bounces) total_no_of_bounces
@@ -48,7 +48,7 @@ order by total_visits desc;
 <img width="525" height="677" alt="Image" src="https://github.com/user-attachments/assets/714e7d43-bf7e-4427-8108-9ae9bd2958ce" />
 
 ### 3. Revenue by traffic source by week, by month in June 2017
-```
+``` sql
      -- Revenue by month
 SELECT 'Month' time_type
   , format_date('%Y%m', parse_date('%Y%m%d', date)) time
@@ -79,7 +79,7 @@ order by revenue desc;
 <img width="781" height="677" alt="Image" src="https://github.com/user-attachments/assets/ab76e8bc-191a-4b31-a4fb-c62497e9bfad" />
 
 ### 4. Conversion rate by traffic source in 2017. (order by conversion_rate desc)
-```
+``` sql
 SELECT trafficSource.source source
   , sum(totals.visits) visits
   , sum(totals.transactions) transactions
@@ -95,7 +95,7 @@ order by conversion_rate desc;
 <img width="628" height="108" alt="Image" src="https://github.com/user-attachments/assets/fcbe51d9-6509-4d11-8896-9352a30fb3f7" />
 
 ### 5. Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
-```
+``` sql
      -- Avg by purchasers
 with purchasers as(
   SELECT format_date('%Y%m', parse_date('%Y%m%d', date)) month
@@ -132,7 +132,7 @@ order by month;
 <img width="603" height="80" alt="Image" src="https://github.com/user-attachments/assets/d7291696-702f-4c09-a836-c4feaa1553f7" />
 
 ### 6. Average number of transactions per user that made a purchase in July 2017
-```
+``` sql
 SELECT format_date('%Y%m', parse_date('%Y%m%d', date)) Month
   , round(sum(totals.transactions) / count(distinct fullVisitorId), 9) Avg_total_transactions_per_user
 FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`,
@@ -147,7 +147,7 @@ group by Month;
 <img width="343" height="53" alt="Image" src="https://github.com/user-attachments/assets/bd78da18-d26f-4d3f-b549-d6b55a10b25e" />
 
 ### 7. Revenue contribution by device (desktop,mobile...) (order by ratio desc)
-```
+``` sql
 with device_revenue as ( 
  SELECT device.deviceCategory device
     , round(sum(product.productRevenue) / 1000000, 2) revenue_by_device
@@ -177,7 +177,7 @@ order by ratio desc;
 <img width="525" height="108" alt="Image" src="https://github.com/user-attachments/assets/7e30b0b0-bd51-421a-952c-6c40ef715888" />
 
 ### 8. Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017. 
-```
+``` sql
 -- List users bought product "YouTube Men's Vintage Henley"
 with buyers as (
   SELECT distinct fullVisitorId purchasers
@@ -208,7 +208,7 @@ order by quantity desc;
 
 ### 9. Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017. For example, 100% product view then 40% add_to_cart and 10% purchase.
 - Option 1:
-```
+``` sql
 with view_page as (
   SELECT format_date('%Y%m', parse_date('%Y%m%d', date)) month
     , count(hits.eCommerceAction.action_type) num_product_view
@@ -251,7 +251,7 @@ order by month;
 ```
 
 - Option 2:
-```
+``` sql
 with raw_data as (
   SELECT format_date('%Y%m', parse_date('%Y%m%d', date)) month
     , sum(case when hits.eCommerceAction.action_type = '2' then 1 else 0 end) num_product_view
@@ -277,7 +277,7 @@ order by month;
 <img width="784" height="109" alt="Image" src="https://github.com/user-attachments/assets/79574d43-f5de-4355-ae64-38ad63b01a35" />
 
 ### 10. Calculate revenue by week from May to July 2017 and culmulative revenue.
-```
+``` sql
 with week_revenue as(
   SELECT format_date('%Y%W', parse_date('%Y%m%d', date)) Week
     , round(sum(product.productRevenue) / 1000000, 2) weekly_revenue
