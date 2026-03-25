@@ -1,21 +1,21 @@
 # E-commerce Analytics Project (Google Analytics - BigQuery)
 ## Overview
-### This project analyzes an e-commerce dataset using Google Analytics sample data on BigQuery. 
-### The goal is to understand user behavior, conversion performance, and revenue patterns across different traffic sources and devices.
+#### This project analyzes an e-commerce dataset using Google Analytics sample data on BigQuery. 
+#### The goal is to understand user behavior, conversion performance, and revenue patterns across different traffic sources and devices.
 
 ## Objectives
-### Analyze website traffic (visits, pageviews, transactions)
-### Evaluate marketing performance by traffic source
-### Measure conversion rate and user behavior
-### Understand purchase patterns and product relationships
-### Build funnel and cohort analysis
+#### Analyze website traffic (visits, pageviews, transactions)
+#### Evaluate marketing performance by traffic source
+#### Measure conversion rate and user behavior
+#### Understand purchase patterns and product relationships
+#### Build funnel and cohort analysis
 
 ## Tools & Technologies
-### SQL (Google BigQuery)
-### Google Analytics Sample Dataset
+#### SQL (Google BigQuery)
+#### Google Analytics Sample Dataset
 
 ## Dataset
-### Source: ga_sessions_@BigQueryDateShardedTable
+#### Source: ga_sessions_@BigQueryDateShardedTable
 
 ## Key Analyses & Resultsyses & Results
 ### 1. Website Traffic Overview (Q1 2017)
