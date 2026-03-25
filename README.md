@@ -20,32 +20,32 @@
 ## Key Analyses & Resultsyses & Results
 ### 1. Website Traffic Overview (Q1 2017)
 #### Description: Calculate total visits, pageviews, and transactions by month
-#### 📷 Result: 
+#### Result: 
 <img width="636" height="107" alt="Image" src="https://github.com/user-attachments/assets/fd068a9a-e940-4a96-9edb-e79d8ab86bd5" />
 
 ### 2. Bounce Rate by Traffic Source
 #### Description: Measure bounce rate by traffic source
-#### 📷 Result: 
+#### Result: 
 <img width="525" height="677" alt="Image" src="https://github.com/user-attachments/assets/714e7d43-bf7e-4427-8108-9ae9bd2958ce" />
 
 ### 3. Revenue by Traffic Source (Month & Week)
 #### Description: Analyze revenue contribution by traffic source (weekly vs monthly)
-#### 📷 Result: 
+#### Result: 
 <img width="781" height="677" alt="Image" src="https://github.com/user-attachments/assets/ab76e8bc-191a-4b31-a4fb-c62497e9bfad" />
 
 ### 4. Conversion Rate by Traffic Source
 #### Description: Evaluate effectiveness of traffic sources
-#### 📷 Result:
+#### Result:
 <img width="628" height="108" alt="Image" src="https://github.com/user-attachments/assets/fcbe51d9-6509-4d11-8896-9352a30fb3f7" />
 
 ### 5. User Behavior: Purchasers vs Non-Purchasers
 #### Description: Compare average pageviews between purchasers and non-purchasers
-#### 📷 Result:  
+#### Result:  
 <img width="603" height="80" alt="Image" src="https://github.com/user-attachments/assets/d7291696-702f-4c09-a836-c4feaa1553f7" />
 
 ### 6. Average Transactions per User
 #### Description: Measure purchasing intensity per user
-#### 📷 Result: 
+#### Result: 
 <img width="343" height="53" alt="Image" src="https://github.com/user-attachments/assets/bd78da18-d26f-4d3f-b549-d6b55a10b25e" />
 
 ### 7. Revenue by Device
